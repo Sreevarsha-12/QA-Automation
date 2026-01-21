@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | QA Automation Portal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #2980b9, #6dd5fa);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            width: 360px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+            color: #555;
+            font-weight: normal;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #2980b9;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #1f6391;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .link {
+            margin-top: 15px;
+        }
+
+        .link a {
+            text-decoration: none;
+            color: #2980b9;
+            font-size: 14px;
+        }
+
+        .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>QA Automation Portal</h1>
+    <h3>Login</h3>
+
+    <form method="POST">
+        <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter Username"
+            required
+        >
+
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter Password"
+            required
+        >
+
+        <button id="loginBtn" type="submit">Login</button>
+    </form>
+
+    <div id="error" class="error">
+        {{ error }}
+    </div>
+
+    <div class="link">
+        <a href="/forgot-password">Forgot Password?</a>
+    </div>
+
+    <div class="link">
+        <a href="/register">New user? Register here</a>
+    </div>
+</div>
+
+</body>
+</html>
